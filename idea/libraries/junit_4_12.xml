@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="junit-4.12">
+    <CLASSES>
+      <root url="jar://C:/TestGit/ACQ2/libs/junit-4.12.jar!/" />
+      <root url="jar://C:/TestGit/ACQ2/libs/log4j-1.2.17.jar!/" />
+      <root url="jar://C:/TestGit/ACQ2/libs/selenium-server-standalone-2.48.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
