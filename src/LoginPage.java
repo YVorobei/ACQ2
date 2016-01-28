@@ -60,5 +60,49 @@ public class LoginPage {
         return false;
     }
 
+    //REGISTRATION PAGE
 
+    public void fillEmailFieldRegistration(String value) {
+        try {
+            web.clearAndInput("TextEmailRegistration", value);
+            log.info("input to TextEmailRegistration - " + value);
+        } catch (NoElementFound noElementFound) {
+            noElementFound.printStackTrace();
+        }
+    }
+
+    public void fillRepeatEmailRegistration(String value) {
+        try {
+            web.clearAndInput("TextRepeatEmailRegistration", value);
+            log.info("input to TextRepeatEmailRegistration - " + value);
+        } catch (NoElementFound noElementFound) {
+            noElementFound.printStackTrace();
+        }
+    }
+
+    public void fillPasswordRegistration1(String value){
+        try {
+            web.clearAndInput("TextPasswordTextRegistration", value);
+            log.info("input to TextPasswordTextRegistration - " + value);
+        } catch (NoElementFound noElementFound){
+            noElementFound.printStackTrace();
+        }
+    }
+
+    public void fillRepeatPasswordRegistration(String value){
+        try {
+            web.clearAndInput("TextPasswordRepeatText", value);
+            log.info("input to TextPasswordRepeatText - " + value);
+        } catch (NoElementFound noElementFound){
+            noElementFound.printStackTrace();
+        }
+    }
+
+    public void pressButtonRegister() {
+        try {
+            web.clickButton("ButtonRegister");
+        } catch (NoElementFound noElementFound) {
+            noElementFound.printStackTrace();
+        }
+    }
 }
