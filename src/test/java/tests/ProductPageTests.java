@@ -10,7 +10,16 @@ import pages.MainPage;
 import pages.ProductPage;
 
 /**
- * Created by Vorobei on 01.02.2016.
+ * Created by Vorobei on 05.02.2016.
+ *
+ * TEST for product Page
+ *
+ * 1.  test1_positiveOpenProductPage
+ * 2.  test2_positiveBuyProduct
+ * 3.  test3_positiveCheckNameProduct
+ * 4.  test4_positiveCheckPriceProduct
+ * 5.  test5_positiveCheckTabProduct
+ *
  */
 public class ProductPageTests extends Fixture{
 
@@ -24,10 +33,10 @@ public class ProductPageTests extends Fixture{
         productPage = new ProductPage(driver);
     }
 
-    @Test
-    public void test1_openProductPage() {
-        //mainPage.openMainPage();
-        //mainPage.refreshPage();
+    /*@Test
+     public void test1_openProductPage() {
+        mainPage.openMainPage();
+        mainPage.refreshPage();
 
         //(or menu class)
         mainPage.switchToUnderwearBathMenu();
@@ -38,11 +47,33 @@ public class ProductPageTests extends Fixture{
         productPage.switchToFirstProductPage();
 
         Assert.assertTrue(productPage.checkCorrectSwitchToProductPage(), "INCorrect switch to product page");
+    } */
+
+
+    //@Test
+    public void test1_positiveOpenProductPage() {
+        mainPage.openMainPage();
+        mainPage.refreshPage();
+        mainPage.switchToUnderwearBathMenu();
+        productPage.switchToPantiesCategory();
+        productPage.switchToFirstProductPage();
+        Assert.assertTrue(productPage.checkCorrectSwitchToProductPage(), "INCorrect switch to product page");
+    }
+
+
+    @Test
+    public void test2_positiveBuyProduct() {
+        mainPage.openMainPage();
+        mainPage.refreshPage();
+        mainPage.switchToUnderwearBathMenu();
+        productPage.switchToPantiesCategory();
+        productPage.switchToFirstProductPage();
+
+        Assert.assertTrue(productPage.checkCorrectSwitchToProductPage(), "INCorrect switch to product page");
     }
 
     @AfterClass
     public static void tearDown() throws Exception {
         log.info("End LoginTests");
     }
-
 }
